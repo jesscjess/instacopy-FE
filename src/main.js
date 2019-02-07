@@ -1,8 +1,17 @@
+// import Vue from 'vue'
+// import App from './App.vue'
+
+// Vue.config.productionTip = false
+
+// new Vue({
+//   render: h => h(App),
+// }).$mount('#app')
+
 import Vue from 'vue'
-import App from './App.vue'
-
+import App from './App'
+import router from './router'
 Vue.config.productionTip = false
-
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+router,
+render: createEl => createEl(App)
+}).$mount('#app');
